@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
-from wordle import CLIPlayer, LetterStates
-from cli import CLIConfig
+from wordle import LetterStates
+from cli import CLIConfig, CLIPlayer
 
 class TestCLIPlayer(unittest.TestCase):
     def setUp(self):
