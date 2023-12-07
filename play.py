@@ -19,7 +19,7 @@ def print_help_exit():
     print("-h, --help\t\tPrint this help text and quit")
     exit()
 
-if __name__=="__main__":
+def play():
     game = wordle.Game()
     player = CLIPlayer()
     
@@ -67,3 +67,6 @@ if __name__=="__main__":
         except (KeyboardInterrupt, EOFError):
             print()
             exit()
+
+if __name__=="__main__":
+    play()

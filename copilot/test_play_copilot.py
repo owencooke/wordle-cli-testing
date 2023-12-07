@@ -20,5 +20,25 @@ SOLUTION (string)       * Use a given SOLUTION (must be 5-letter word)
         print_help_exit()
         self.assertEqual(mock_stdout.getvalue(), expected_output)
 
+    def test_print_help_exit_with_args(self):
+        with self.assertRaises(SystemExit):
+            print_help_exit(["-h"])
+
+    def test_print_help_exit_with_invalid_args(self):
+        with self.assertRaises(SystemExit):
+            print_help_exit(["--invalid"])
+
+    def test_print_help_exit_with_solution_arg(self):
+        with self.assertRaises(SystemExit):
+            print_help_exit(["SOLUTION"])
+
+    def test_print_help_exit_with_hints_arg(self):
+        with self.assertRaises(SystemExit):
+            print_help_exit(["--hints"])
+
+    def test_print_help_exit_with_multiple_args(self):
+        with self.assertRaises(SystemExit):
+            print_help_exit(["-h", "--hints"])
+
 if __name__ == '__main__':
     unittest.main()

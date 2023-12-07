@@ -9,7 +9,7 @@ class TestGame(unittest.TestCase):
         self.assertEqual(Game.check_guess(guess, solution), expected)
 
         guess = "APPLR"
-        expected = [LetterStates.CORRECTPOSITION, LetterStates.CORRECTPOSITION, LetterStates.CORRECTPOSITION, LetterStates.CORRECTPOSITION, LetterStates.INCORRECTPOSITION]
+        expected = [LetterStates.CORRECTPOSITION, LetterStates.CORRECTPOSITION, LetterStates.CORRECTPOSITION, LetterStates.CORRECTPOSITION, LetterStates.NOTPRESENT]
         self.assertEqual(Game.check_guess(guess, solution), expected)
 
         guess = "ORANGE"
